@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: kesLogBack
+  
+  datasource:
+    hikari:
+      driver-class-name: org.mariadb.jdbc.Driver
+      jdbc-url: ${DB_URL}
+      username: ${DB_USER}
+      password: ${DB_PW}
+      connection-test-query: SELECT 1
