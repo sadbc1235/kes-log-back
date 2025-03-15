@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kesLogBack.menu.mapper.MenuMapper">
-
-    <select id="select1"
-            resultType="string"
+    
+    <select id="selectMenuListByParentMenuCode"
+    		parameterType="com.kesLogBack.menu.model.param.PSelectMenuListByParentMenuCode"
+    		resultType="com.kesLogBack.menu.model.result.RSelectMenuListByParentMenuCode"
     >
-        /* select1 */
-        SELECT 1
-        ;
+    	/* selectMenuListByParentMenuCode */
+    	SELECT 
+			menu_code	AS menuCode
+			, menu_name	AS menuName
+		FROM	t_menu_setting
+		WHERE	parent_menu_code = #{parentMenuCode}
     </select>
 
 </mapper>
