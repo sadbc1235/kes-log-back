@@ -7,3 +7,4 @@ CREATE TABLE IF NOT EXISTS `t_menu_setting` (
     , KEY			(`parent_menu_code`)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8mb4 COMMENT='메뉴 설정';
 ALTER TABLE `t_menu_setting`   ADD COLUMN IF NOT EXISTS `menu_name`			VARCHAR(256)	NOT NULL    COMMENT '메뉴명'    AFTER `parent_menu_code`;
+ALTER TABLE `t_menu_setting`   ADD COLUMN IF NOT EXISTS `sub_title`			VARCHAR(256)		NULL    COMMENT '소제목'    AFTER `menu_name`;

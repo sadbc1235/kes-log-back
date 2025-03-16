@@ -10,6 +10,7 @@ import lombok.ToString;
 public class RSelectMenuListByParentMenuCode {
 	private String menuCode;
 	private String menuName;
+	private String articleCnt;
 	
 	public String getMenuCode() {
 		return menuCode;
@@ -22,5 +23,11 @@ public class RSelectMenuListByParentMenuCode {
 	}
 	public void setMenuName(String menuName) {
 		this.menuName = menuName;
+	}
+	public String getArticleCnt() {
+		return articleCnt;
+	}
+	public void setArticleCnt(String articleCnt) {
+		this.articleCnt = articleCnt;
 	}
 }

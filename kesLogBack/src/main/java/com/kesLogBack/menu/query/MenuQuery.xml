@@ -10,8 +10,20 @@
     	SELECT 
 			menu_code	AS menuCode
 			, menu_name	AS menuName
+			, 0			AS articleCnt
 		FROM	t_menu_setting
 		WHERE	parent_menu_code = #{parentMenuCode}
     </select>
 
+	<select id="selectMenuTitleInfo"
+    		parameterType="com.kesLogBack.menu.model.param.PSelectMenuInfo"
+    		resultType="com.kesLogBack.menu.model.result.RSelectMenuTitleInfo"
+	>
+		/* selectMenuTitleInfo */
+		SELECT 
+			menu_name	AS menuName
+			, sub_title	AS subTitle
+		FROM	t_menu_setting
+		WHERE	menu_code = #{menuCode}
+	</select>
 </mapper>
